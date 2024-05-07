@@ -1,2 +1,3 @@
-# Hard.qcc.boot
-Boot builder using c 
+# mipis.assemby
+
+assembly launguage tutor 
