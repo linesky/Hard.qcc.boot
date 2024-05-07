@@ -1,4 +1,4 @@
-	.file	1 "divs.c"
+
 	.section .mdebug.abi32
 	.previous
 	.nan	legacy
@@ -98,6 +98,3 @@ main:
 	.set	macro
 	.set	reorder
 	.end	main
-	.size	main, .-main
-	.ident	"GCC: (Debian 10.2.1-6) 10.2.1 20210110"
-	.section	.note.GNU-stack,"",@progbits
