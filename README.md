@@ -1,3 +1,3 @@
-# mipis.assemby
+# mips.assemby
 
 assembly launguage tutor 
