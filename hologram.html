@@ -1,0 +1,99 @@
+<<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>3D Matrix Visualization</title>
+<style>
+  body {
+    margin: 0;
+    overflow: hidden;
+    background-color: yellow;
+  }
+  canvas {
+    display: block;
+  }
+</style>
+</head>
+<body>
+<canvas id="canvas"></canvas>
+<script>
+  const canvas = document.getElementById('canvas');
+  const ctx = canvas.getContext('2d');
+  const size = 400;  // Size of the canvas
+  const gridSize = 8;  // 8x8x8 grid
+  const cellSize = size / gridSize;
+  const sphereRadius = 5;  // Radius of the sphere
+  let counter = 0;
+
+  canvas.width = size;
+  canvas.height = size;
+
+  function to2DCoordinates(x, y, z) {
+    const centerX = canvas.width / 2;
+    const centerY = canvas.height / 2;
+    const isoX = (x - y) * Math.cos(30 * Math.PI / 180) * cellSize + centerX;
+    const isoY = (x + y) * Math.sin(30 * Math.PI / 180) * cellSize - z * cellSize + centerY;
+    return { x: isoX, y: isoY };
+  }
+
+  function drawAxis(x, y, z) {
+    const { x: isoX, y: isoY } = to2DCoordinates(x, y, z);
+    ctx.strokeStyle = 'black';
+    ctx.lineWidth = 2;
+
+    // Draw X axis
+    ctx.beginPath();
+    ctx.moveTo(isoX, isoY);
+    const endX = to2DCoordinates(gridSize - 1, y, z);
+    ctx.lineTo(endX.x, endX.y);
+    ctx.stroke();
+
+    // Draw Y axis
+    ctx.beginPath();
+    ctx.moveTo(isoX, isoY);
+    const endY = to2DCoordinates(x, gridSize - 1, z);
+    ctx.lineTo(endY.x, endY.y);
+    ctx.stroke();
+
+    // Draw Z axis
+    ctx.beginPath();
+    ctx.moveTo(isoX, isoY);
+    const endZ = to2DCoordinates(x, y, gridSize - 1);
+    ctx.lineTo(endZ.x, endZ.y);
+    ctx.stroke();
+  }
+
+  function drawSphere(x, y, z) {
+    const { x: drawX, y: drawY } = to2DCoordinates(x, y, z);
+    ctx.fillStyle = 'black';
+    ctx.beginPath();
+    ctx.arc(drawX, drawY, sphereRadius, 0, 2 * Math.PI);
+    ctx.fill();
+  }
+
+  function updateCounter() {
+    counter++;
+    document.title = `Counter: ${counter}`;
+  }
+
+  function draw() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    const x = counter % gridSize;
+    const y = Math.floor(counter / gridSize) % gridSize;
+    const z = Math.floor(counter / (gridSize * gridSize)) % gridSize;
+
+    drawAxis(x, y, z);
+    drawSphere(x, y, z);
+  }
+
+  function update() {
+    updateCounter();
+    draw();
+  }
+
+  setInterval(update, 100);
+</script>
+</body>
+</html>
