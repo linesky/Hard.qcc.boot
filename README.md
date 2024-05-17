@@ -1,4 +1,2 @@
-# mips.assemby
-
-assembly launguage tutor 
-"as hello.asm -o hello.o;gcc hello.o -o hello 
+# hologram.simulator
+simulates a 3 d matrix television hologram
