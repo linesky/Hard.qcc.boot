@@ -4,6 +4,13 @@ distro puppy 0.6 install on a disk image easy to use
 https://mega.nz/#!0zQ3CAKY!WEI5xAdu387-cjDhHBgb1Hdc3RyvcSaN-mAhu2rrV_Y
 
 
+image.gz
+
+
+https://mega.nz/#!I3pBhLKb!SbRISXkvMXKwnMl6DeJdtCIvQ9DfOgebcwa_NjZSZdY
+
+
+
 puppy have a social media site than help you to modify distro
 
 /mnt/hda       hard disk than you can modify
