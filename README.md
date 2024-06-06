@@ -9,7 +9,9 @@ image.gz
 
 https://mega.nz/#!I3pBhLKb!SbRISXkvMXKwnMl6DeJdtCIvQ9DfOgebcwa_NjZSZdY
 
+image.img
 
+https://mega.nz/#!5jhSUIzD!xselw_kWkM7lU2kdE-CxaYzQ4Jec5GqExCbtHMF1D_U
 
 puppy have a social media site than help you to modify distro
 
