@@ -1,7 +1,8 @@
 # distro.puppy
 distro puppy 0.6 install on a disk image easy to use
 
-https://mega.nz/#!wvZgSYCS!O6uYLt3wFqjvJ_spgebiF06ngcWNjPUyx2jaNLDLWeU
+https://mega.nz/#!0zQ3CAKY!WEI5xAdu387-cjDhHBgb1Hdc3RyvcSaN-mAhu2rrV_Y
+
 
 puppy have a social media site than help you to modify distro
 
